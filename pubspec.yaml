@@ -4,23 +4,11 @@ description: Flutter plugin for launching a URL on Android and iOS. Supports
 homepage: https://github.com/flutter/plugins/tree/master/packages/url_launcher/url_launcher
 version: 5.4.1
 
-flutter:
-  plugin:
-    platforms:
-      android:
-        package: io.flutter.plugins.urllauncher
-        pluginClass: UrlLauncherPlugin
-      ios:
-        pluginClass: FLTURLLauncherPlugin
-      web:
-        default_package: url_launcher_web 
-      macos:
-        default_package: url_laucher_macos
-
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher_platform_interface: ^1.0.4
+  url_launcher_platform_interface: 
+    git: "https://github.com/YaoShuwei/url_launch_platform_interface.git"
   # The design on https://flutter.dev/go/federated-plugins was to leave
   # this constraint as "any". We cannot do it right now as it fails pub publish
   # validation, so we set a ^ constraint.
